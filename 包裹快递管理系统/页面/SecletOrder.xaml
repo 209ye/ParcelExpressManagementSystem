@@ -8,7 +8,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d"
-             d:DesignHeight="1060" d:DesignWidth="1650">
+             d:DesignHeight="600" d:DesignWidth="1650">
     <DockPanel>
         <Grid>
             <!-- <Grid.ColumnDefinitions> -->
@@ -20,18 +20,18 @@
 
             <Grid Background="#EEEEEE">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="55"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="浏览订单" FontSize="22" FontWeight="Light" Margin="50 0 0 0" VerticalAlignment="Center"/>
+                <TextBlock Text="浏览订单" FontSize="22" FontWeight="Light" Margin="50 10 0 0" VerticalAlignment="Center"/>
 
 
                 <UniformGrid Grid.Row="1">
 
                     <Border Margin="40 40 20 40" CornerRadius="3">
                         <Border.Background>
-                            <ImageBrush ImageSource="/包裹快递管理系统;component/bg2.png" Opacity="0.2"/>
+                            <ImageBrush ImageSource="/包裹快递管理系统;component/bg2.png" Opacity="0.1"/>
                         </Border.Background>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -39,7 +39,7 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
 
-                            <Grid Panel.ZIndex="1" Margin="-20 -20 20 0">
+                            <Grid Panel.ZIndex="1" Margin="-10 -10 20 0">
                                 <Grid.Effect>
                                     <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" Opacity=".2" ShadowDepth="5"/>
                                 </Grid.Effect>
@@ -52,7 +52,7 @@
 
                                 </Border>
 
-                                <DataGrid Grid.Row="1" Style="{StaticResource MaterialDesignDataGrid}" x:Name="selectOrder" IsReadOnly="True" AutoGenerateColumns="True" CanUserAddRows="False" CanUserSortColumns="True" FontSize="20" FontFamily="#PingFang Regular" Opacity="0.9">
+                                <DataGrid Grid.Row="1" Style="{StaticResource MaterialDesignDataGrid}" x:Name="selectOrder" IsReadOnly="True" AutoGenerateColumns="True" CanUserAddRows="False" CanUserSortColumns="True" FontSize="20" FontFamily="/包裹快递管理系统;component/#Microsoft YaHei Light" Opacity="0.9">
                                     <DataGrid.Effect>
                                         <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="0.5" />
                                     </DataGrid.Effect>

@@ -8,7 +8,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d"
-             d:DesignHeight="1060" d:DesignWidth="1650">
+             d:DesignHeight="600" d:DesignWidth="1650">
     <DockPanel>
         <Grid>
             <!-- <Grid.ColumnDefinitions> -->
@@ -20,11 +20,11 @@
 
             <Grid Background="#EEEEEE">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="55"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="个人中心" FontSize="22" FontWeight="Light" Margin="50 0 0 0" VerticalAlignment="Center"/>
+                <TextBlock Text="个人中心" FontSize="22" FontWeight="Light" Margin="50 10 0 0" VerticalAlignment="Center"/>
 
 
                 <UniformGrid Grid.Row="1" Columns="2">
@@ -43,9 +43,6 @@
                                 <Grid.Effect>
                                     <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" Opacity=".2" ShadowDepth="1"/>
                                 </Grid.Effect>
-                                <Grid.Resources>
-
-                                </Grid.Resources>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"></RowDefinition>
                                     <RowDefinition Height="Auto"></RowDefinition>
@@ -91,9 +88,6 @@
                                 <Grid.Effect>
                                     <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" Opacity=".2" ShadowDepth="1"/>
                                 </Grid.Effect>
-                                <Grid.Resources>
-
-                                </Grid.Resources>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"></RowDefinition>
                                     <RowDefinition Height="Auto"></RowDefinition>

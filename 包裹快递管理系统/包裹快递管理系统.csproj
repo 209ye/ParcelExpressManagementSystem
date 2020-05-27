@@ -211,6 +211,7 @@
     <Resource Include="WenCangShuFang-2.ttf" />
     <Resource Include="YANJIANTI.TTF" />
     <Resource Include="iconfont.ttf" />
+    <Resource Include="msyhl.ttc" />
     <None Include="packages.config" />
     <Resource Include="PingFang Regular.ttf" />
     <Resource Include="PingFang Medium.ttf" />

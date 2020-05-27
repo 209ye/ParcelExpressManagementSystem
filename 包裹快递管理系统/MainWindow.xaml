@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="商家物流管理系统" Height="1080" Width="1920" WindowStyle="None" AllowsTransparency="True">
+        Title="商家物流管理系统" Height="860" Width="1620" WindowStyle="None" AllowsTransparency="True">
 
     <Window.Resources>
         <Style TargetType="{x:Type TabControl}">
@@ -163,10 +163,10 @@
     <Grid Background="Transparent" Margin="0,-30,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
-            <RowDefinition Height="1080"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid  Grid.Row="0" x:Name="Border_Title2">
+        <Grid Grid.Row="0">
             <Grid.Background>
                 <LinearGradientBrush>
                     <LinearGradientBrush.GradientStops>
@@ -177,6 +177,12 @@
             </Grid.Background>
             <TextBlock Text="商家物流管理系统" Margin="5,0,0,0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="/包裹快递管理系统;component/#WenCang" />
         </Grid>
+
+        <Border Grid.Row="0" Opacity="0.2" x:Name="Border_Title2">
+            <Border.Background>
+                <ImageBrush ImageSource="bg2.png" TileMode="FlipXY" Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
 
         <Grid Row="1">
 
@@ -248,7 +254,7 @@
                 </Button>
 
                 <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                        Background="OrangeRed" BorderBrush="OrangeRed" Opacity="0.9">
+                        Background="OrangeRed" BorderBrush="OrangeRed" Opacity="0.9" Click="toLoginWin">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                         <TextBlock Text="&#xe612;" FontFamily="/#iconfont" FontSize="24"/>
                         <TextBlock Text="退出登陆" Margin="15 0 0 0"  VerticalAlignment="Center"/>

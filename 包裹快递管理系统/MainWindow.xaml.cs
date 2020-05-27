@@ -37,14 +37,14 @@ namespace 包裹快递管理系统
             // Topmost = true;
         }
 
-        private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
-        {
-            WindowState = WindowState.Maximized;
-            ResizeMode = ResizeMode.NoResize;
-            ShowMaxRestoreButton = false;
-            ShowMinButton = false;
-            Loaded -= OnLoaded;
-        }
+        // private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+        // {
+        //     WindowState = WindowState.Maximized;
+        //     ResizeMode = ResizeMode.NoResize;
+        //     ShowMaxRestoreButton = false;
+        //     ShowMinButton = false;
+        //     Loaded -= OnLoaded;
+        // }
 
         void Border_Title_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -124,5 +124,6 @@ namespace 包裹快递管理系统
             PersonalCenter m1 = new PersonalCenter();
             AddTab(m1, A_PersonalCenter.Text);
         }
+
     }
 }
