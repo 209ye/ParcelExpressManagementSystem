@@ -1,0 +1,97 @@
+﻿<controls:MetroWindow x:Class="包裹快递管理系统.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:包裹快递管理系统"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="商家物流管理系统" Height="660" Width="360" WindowStyle="None" AllowsTransparency="True">
+
+    <controls:MetroWindow.TitleTemplate>
+        <DataTemplate>
+            <Grid></Grid>
+        </DataTemplate>
+    </controls:MetroWindow.TitleTemplate>
+
+    <Grid Background="Transparent" Margin="0,-30,0,0">
+
+        <Border Grid.Column="0" Panel.ZIndex="1" Background="#FFFFFF">
+            <Border.Effect>
+                <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="1" />
+            </Border.Effect>
+        </Border>
+
+        <Grid Panel.ZIndex="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill" Opacity="0.2"></ImageBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0" x:Name="Border_Title">
+                <Grid.Background>
+                    <LinearGradientBrush>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="DarkSeaGreen" Offset="0.2"></GradientStop>
+                            <GradientStop Color="Violet" Offset="0.7"></GradientStop>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <TextBlock Text="商家物流管理系统" Margin="5,0,0,0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="/包裹快递管理系统;component/#WenCang" />
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <TextBlock Text="商家物流管理系统" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="/#颜简体" Foreground="LightSlateGray" Margin="0,130,0,0"/>
+                <Border Margin="30,0" BorderBrush="Gray" BorderThickness="0 0 0 0"></Border>
+            </Grid>
+
+
+            <Grid Grid.Row="2">
+
+            
+
+            <StackPanel>
+
+                <TextBox Width="260" Height="45"  x:Name="User" TextWrapping="NoWrap"  Margin="15 40 15 0" BorderBrush="BlueViolet" BorderThickness="0 0 0 2" Opacity="0.5" FontSize="20" Text="admin">
+                    
+                </TextBox>
+
+                <PasswordBox Width="260" Height="45"  x:Name="Password" Margin="15 30 15 0" BorderBrush="BlueViolet" BorderThickness="0 0 0 2" Opacity="0.5" FontSize="18">
+
+                </PasswordBox>
+
+                <!-- <TextBox Text="Hello" Width="480" TextWrapping="Wrap" IsReadOnly="True"  BorderBrush="{x:Null}" BorderThickness="0"></TextBox> -->
+
+                <Button Width="180" Height="48" Margin="15 40 15 0"  FontSize="18" HorizontalContentAlignment="Center"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Background="#9C27B3" BorderBrush="#9C27B3" Click="toMainWin" Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xe63d;" FontSize="24" FontFamily="/#iconfont"/>
+                        <TextBlock Text="登录" Margin="15 0 0 0" FontFamily="#颜简体" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Width="180" Height="48" Margin="15 20 15 0"  FontSize="18" HorizontalContentAlignment="Center"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Background="#9C27B3" BorderBrush="#9C27B3" Opacity="0.8">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xeb8f;" FontSize="24" FontFamily="/#iconfont"/>
+                        <TextBlock Text="注册" Margin="15 0 0 0" FontFamily="#颜简体" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+
+            </StackPanel>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</controls:MetroWindow>

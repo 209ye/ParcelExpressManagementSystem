@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="包裹快递管理系统.SecletOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:包裹快递管理系统"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d"
+             d:DesignHeight="1060" d:DesignWidth="1650">
+    <DockPanel>
+        <Grid>
+            <!-- <Grid.ColumnDefinitions> -->
+            <!--     <ColumnDefinition Width="330"/> -->
+            <!--     <ColumnDefinition/> -->
+            <!-- </Grid.ColumnDefinitions> -->
+
+
+
+            <Grid Background="#EEEEEE">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="浏览订单" FontSize="22" FontWeight="Light" Margin="50 0 0 0" VerticalAlignment="Center"/>
+
+
+                <UniformGrid Grid.Row="1">
+
+                    <Border Margin="40 40 20 40" CornerRadius="3">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/包裹快递管理系统;component/bg2.png" Opacity="0.2"/>
+                        </Border.Background>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Panel.ZIndex="1" Margin="-20 -20 20 0">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" Opacity=".2" ShadowDepth="5"/>
+                                </Grid.Effect>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height=".50*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" Grid.RowSpan="1" CornerRadius="5" Background="White" Opacity="0.2" />
+                                <Border Grid.Row="0" Grid.RowSpan="2" Opacity="0.8" >
+
+                                </Border>
+
+                                <DataGrid Grid.Row="1" Style="{StaticResource MaterialDesignDataGrid}" x:Name="selectOrder" IsReadOnly="True" AutoGenerateColumns="True" CanUserAddRows="False" CanUserSortColumns="True" FontSize="20" FontFamily="#PingFang Regular" Opacity="0.9">
+                                    <DataGrid.Effect>
+                                        <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="0.5" />
+                                    </DataGrid.Effect>
+                                    <DataGrid.ColumnHeaderStyle>
+                                        <Style></Style>
+                                    </DataGrid.ColumnHeaderStyle>
+                                    <!-- <DataGrid.Columns> -->
+                                    <!--     <DataGridComboBoxColumn x:Name="DingDan" Header="订单编号" DisplayMemberPath="订单编号" SelectedValuePath="订单编号ID"  TextBinding="{Binding 订单编号}" SelectedValueBinding="{Binding 订单编号ID}" Width="160" /> -->
+                                    <!--     <DataGridTextColumn Header="物流单号" Binding="{Binding 物流单号}" Width="160" /> -->
+                                    <!--     <DataGridTextColumn Header="物流公司" Binding="{Binding 物流公司 }" Width="140" /> -->
+                                    <!--     <DataGridTextColumn Header="发件人" Binding="{Binding 发件人 }" Width="120" /> -->
+                                    <!--     <DataGridTextColumn Header="发货地址" Binding="{Binding 发货地址 }" Width="160" /> -->
+                                    <!--     <DataGridTextColumn Header="收件人" Binding="{Binding 收件人 }" Width="120" /> -->
+                                    <!--     <DataGridTextColumn Header="收件地址" Binding="{Binding 收件地址 }" Width="160" /> -->
+                                    <!--     <DataGridTextColumn Header="收件人电话" Binding="{Binding 收件人电话 }" Width="160" /> -->
+                                    <!--     <DataGridTextColumn Header="状态" Binding="{Binding 状态 }" Width="100" /> -->
+                                    <!--     <DataGridTextColumn Header="备注" Binding="{Binding 备注 }" Width="160" /> -->
+                                    <!-- -->
+                                    <!-- </DataGrid.Columns> -->
+                                </DataGrid>
+
+                            </Grid>
+
+                        </Grid>
+                    </Border>
+
+                </UniformGrid>
+
+
+
+
+            </Grid>
+
+        </Grid>
+    </DockPanel>
+</UserControl>
