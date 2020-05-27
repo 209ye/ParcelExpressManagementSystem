@@ -24,6 +24,31 @@ namespace 包裹快递管理系统
         public MainWindow()
         {
             InitializeComponent();
+            this.Border_Title2.MouseDown += new MouseButtonEventHandler(Border_Title_MouseDown);
+
+            //窗口全屏
+            // Loaded += OnLoaded;
+
+            //窗口全屏且透明
+            // AllowsTransparency = true;
+            // WindowStyle = WindowStyle.None;
+            // WindowState = WindowState.Maximized;
+            // Background = Brushes.Transparent;
+            // Topmost = true;
+        }
+
+        private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+        {
+            WindowState = WindowState.Maximized;
+            ResizeMode = ResizeMode.NoResize;
+            ShowMaxRestoreButton = false;
+            ShowMinButton = false;
+            Loaded -= OnLoaded;
+        }
+
+        void Border_Title_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
 
         private void Main1Page(object sender, RoutedEventArgs e)
@@ -92,6 +117,12 @@ namespace 包裹快递管理系统
         {
             SecletOrder m1 = new SecletOrder();
             AddTab(m1, A_SecletOrder.Text);
+        }
+
+        private void toPersonalCenterWin(object sender, RoutedEventArgs e)
+        {
+            PersonalCenter m1 = new PersonalCenter();
+            AddTab(m1, A_PersonalCenter.Text);
         }
     }
 }

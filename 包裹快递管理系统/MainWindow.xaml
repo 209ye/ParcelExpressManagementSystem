@@ -70,7 +70,7 @@
 
                                         </RadialGradientBrush>
                                     </Border.Background>
-                                    <TextBlock x:Name="textBlock" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Text="{TemplateBinding Header}" FontFamily="#颜简体"/>
+                                    <TextBlock x:Name="textBlock" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Text="{TemplateBinding Header}" FontFamily="/包裹快递管理系统;component/#NSimSun"/>
                                 </Border>
                                 <Button Width="14" Grid.Column="1" x:Name="btnCloseTab" Click="btnCloseTab_Click">
                                     <Button.Style>
@@ -154,7 +154,32 @@
         </Style>
     </Window.Resources>
 
-    <Grid>
+    <controls:MetroWindow.TitleTemplate>
+        <DataTemplate>
+            <Grid></Grid>
+        </DataTemplate>
+    </controls:MetroWindow.TitleTemplate>
+
+    <Grid Background="Transparent" Margin="0,-30,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="1080"/>
+        </Grid.RowDefinitions>
+
+        <Grid  Grid.Row="0" x:Name="Border_Title2">
+            <Grid.Background>
+                <LinearGradientBrush>
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="DarkSeaGreen" Offset="0.2"></GradientStop>
+                        <GradientStop Color="Violet" Offset="0.7"></GradientStop>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Text="商家物流管理系统" Margin="5,0,0,0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="/包裹快递管理系统;component/#WenCang" />
+        </Grid>
+
+        <Grid Row="1">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="330"/>
             <ColumnDefinition/>
@@ -172,11 +197,11 @@
             </Grid.Background>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
+                <RowDefinition Height="120"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="商家物流管理系统" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="/#颜简体" Foreground="LightSlateGray" Margin="0,10,0,0"/>
+            <TextBlock Text="商家物流管理系统" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/#颜简体" Foreground="LightSlateGray" Margin="0,25,0,0"/>
             <Border Margin="30,0" BorderBrush="Gray" BorderThickness="0 0 0 1"></Border>
 
             <StackPanel Grid.Row="1">
@@ -191,42 +216,42 @@
                 </Button>
 
                 <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                        Background="Transparent" BorderBrush="Transparent" Click="toSelectOrderWin">
+                        Background="BlueViolet" BorderBrush="BlueViolet" Click="toSelectOrderWin" Opacity="0.9">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xe7fe;" FontFamily="/#iconfont" FontSize="26" Foreground="#848484"/>
-                        <TextBlock Text="浏览订单" x:Name="A_SecletOrder" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Text="&#xe7fe;" FontFamily="/#iconfont" FontSize="26"/>
+                        <TextBlock Text="浏览订单" x:Name="A_SecletOrder" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
                 <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                        Background="Transparent" BorderBrush="Transparent">
+                        Background="DarkSeaGreen" BorderBrush="DarkSeaGreen" Opacity="0.9">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xe704;" FontSize="24" FontFamily="/#iconfont" Foreground="#848484"/>
-                        <TextBlock Text="添加订单" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Text="&#xe704;" FontSize="24" FontFamily="/#iconfont"/>
+                        <TextBlock Text="添加订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
                 <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                          Background="Transparent" BorderBrush="Transparent">
+                        Background="YellowGreen" BorderBrush="YellowGreen" Opacity="0.9">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xe613;" FontFamily="/#iconfont" FontSize="24" Foreground="#848484"/>
-                        <TextBlock Text="修改订单" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Text="&#xe613;" FontFamily="/#iconfont" FontSize="24"/>
+                        <TextBlock Text="修改订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
                 <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                          Background="Transparent" BorderBrush="Transparent">
+                        Background="DarkOrange" BorderBrush="DarkOrange" Opacity="0.9" Click="toPersonalCenterWin">
                     <StackPanel Orientation="Horizontal" >
-                        <TextBlock Text="&#xe619;" FontFamily="/#iconfont" FontSize="24" Foreground="#848484"/>
-                        <TextBlock Text="个人中心" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Text="&#xe619;" FontFamily="/#iconfont" FontSize="24"/>
+                        <TextBlock Text="个人中心" x:Name="A_PersonalCenter" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
                 <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                          Background="Transparent" BorderBrush="Transparent" Click="toLoginWin">
+                        Background="OrangeRed" BorderBrush="OrangeRed" Opacity="0.9">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Text="&#xe612;" FontFamily="/#iconfont" Foreground="#848484" FontSize="24"/>
-                        <TextBlock Text="退出登陆" Foreground="#848484" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        <TextBlock Text="&#xe612;" FontFamily="/#iconfont" FontSize="24"/>
+                        <TextBlock Text="退出登陆" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
@@ -244,5 +269,6 @@
             </DockPanel>
         </Grid>
 
+    </Grid>
     </Grid>
 </controls:MetroWindow>

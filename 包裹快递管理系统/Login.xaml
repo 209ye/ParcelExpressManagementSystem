@@ -80,7 +80,7 @@
 
                 <Button Width="180" Height="48" Margin="15 20 15 0"  FontSize="18" HorizontalContentAlignment="Center"
                         materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                        Background="#9C27B3" BorderBrush="#9C27B3" Opacity="0.8">
+                        Background="#FF5FAB10" BorderBrush="#9C27B3" Opacity="0.8">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xeb8f;" FontSize="24" FontFamily="/#iconfont"/>
                         <TextBlock Text="注册" Margin="15 0 0 0" FontFamily="#颜简体" VerticalAlignment="Center"/>
