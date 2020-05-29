@@ -25,7 +25,7 @@ namespace 包裹快递管理系统
         {
             InitializeComponent();
             this.Border_Title2.MouseDown += new MouseButtonEventHandler(Border_Title_MouseDown);
-
+            UP_User.Text = "欢迎您, " + Login.input_user;
             //窗口全屏
             // Loaded += OnLoaded;
 

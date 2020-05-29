@@ -25,6 +25,7 @@ namespace 包裹快递管理系统
     /// </summary>
     public partial class Login : MetroWindow
     {
+        public static String input_user;
         MySQLConnect connect = new MySQLConnect();
 
         public Login()
@@ -41,7 +42,7 @@ namespace 包裹快递管理系统
         private void toMainWin(object sender, RoutedEventArgs e)
         {
             //将输入的账户和密码存储到字符串里面进行匹配
-            String input_user = User.Text;
+            input_user = User.Text;
             String input_pwd = Password.Password;
             try
             {

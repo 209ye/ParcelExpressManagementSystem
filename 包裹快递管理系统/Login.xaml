@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="商家物流管理系统" Height="660" Width="360" WindowStyle="None" AllowsTransparency="True">
+        Title="商家物流管理系统" Height="660" Width="360" WindowStyle="None" AllowsTransparency="True"  MinHeight="583" MinWidth="289">
 
     <controls:MetroWindow.TitleTemplate>
         <DataTemplate>

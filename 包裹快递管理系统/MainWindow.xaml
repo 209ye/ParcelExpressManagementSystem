@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="商家物流管理系统" Height="860" Width="1620" WindowStyle="None" AllowsTransparency="True">
+        Title="商家物流管理系统" Height="860" Width="1620" WindowStyle="None" AllowsTransparency="True" MinHeight="726" MinWidth="1460">
 
     <Window.Resources>
         <Style TargetType="{x:Type TabControl}">
@@ -140,8 +140,8 @@
                                 <Setter Property="Background" TargetName="Bd">
                                     <Setter.Value>
                                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                                            <GradientStop Color="#FFE3E3E3"/>
-                                            <GradientStop Color="#FF9BF9FF" Offset="1"/>
+                                            <GradientStop Color="#FFC7C7C7"/>
+                                            <GradientStop Color="SkyBlue" Offset="1"/>
 
                                         </LinearGradientBrush>
                                     </Setter.Value>
@@ -159,6 +159,19 @@
             <Grid></Grid>
         </DataTemplate>
     </controls:MetroWindow.TitleTemplate>
+
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands ShowLastSeparator="False">
+            <Button Content="settings" />
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="deploy cupcakes" />
+                </StackPanel>
+            </Button>
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
 
     <Grid Background="Transparent" Margin="0,-30,0,0">
         <Grid.RowDefinitions>
@@ -184,97 +197,120 @@
             </Border.Background>
         </Border>
 
+        <Button Grid.Row="0" HorizontalAlignment="Right" Margin="0,0,172,0" Background="Transparent" BorderBrush="Transparent" Click="toPersonalCenterWin">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Ellipse Width="22" Height="22" RenderTransformOrigin="0.5,0.5" >
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-36"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                    <Ellipse.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF0012FF"/>
+                            <GradientStop Color="#FF00FFEF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock Margin="10 0 0 0" x:Name="UP_User" Foreground="Black" VerticalAlignment="Center" FontSize="18" Text="用户" />
+            </StackPanel>
+        </Button>
+
+
         <Grid Row="1">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="330"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="330"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" Panel.ZIndex="1" Background="#FFFFFF">
-            <Border.Effect>
-                <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="1" />
-            </Border.Effect>
-        </Border>
+            <Border Grid.Column="0" Panel.ZIndex="1" Background="#FFFFFF">
+                <Border.Effect>
+                    <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="1" />
+                </Border.Effect>
+            </Border>
 
-        <Grid Panel.ZIndex="1">
-            <Grid.Background>
-                <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill" Opacity="0.2"></ImageBrush>
-            </Grid.Background>
+            <Grid Panel.ZIndex="1">
+                <Grid.Background>
+                    <ImageBrush ImageSource="background.jpg" Stretch="UniformToFill" Opacity="0.2"></ImageBrush>
+                </Grid.Background>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="120"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-            <TextBlock Text="商家物流管理系统" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/#颜简体" Foreground="LightSlateGray" Margin="0,25,0,0"/>
-            <Border Margin="30,0" BorderBrush="Gray" BorderThickness="0 0 0 1"></Border>
+                <TextBlock Text="商家物流管理系统" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="/#颜简体" Foreground="LightSlateGray" Margin="0,25,0,0"/>
+                <Border Margin="30,0" BorderBrush="Gray" BorderThickness="0 0 0 1"></Border>
 
-            <StackPanel Grid.Row="1">
+                <StackPanel Grid.Row="1">
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                    <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
                         materialDesign:ShadowAssist.ShadowDepth="Depth3"
                         Background="#9C27B3" BorderBrush="#9C27B3" Click="Main1Page">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xe63d;" FontSize="24" FontFamily="/#iconfont"/>
-                        <TextBlock Text="主页" x:Name="A_main1" Margin="15 0 0 0" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xe63d;" FontSize="24" FontFamily="/#iconfont"/>
+                            <TextBlock Text="主页" x:Name="A_main1" Margin="15 0 0 0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                    <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
                         Background="BlueViolet" BorderBrush="BlueViolet" Click="toSelectOrderWin" Opacity="0.9">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xe7fe;" FontFamily="/#iconfont" FontSize="26"/>
-                        <TextBlock Text="浏览订单" x:Name="A_SecletOrder" Margin="15 0 0 0"  VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xe7fe;" FontFamily="/#iconfont" FontSize="26"/>
+                            <TextBlock Text="浏览订单" x:Name="A_SecletOrder" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                    <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
                         Background="DarkSeaGreen" BorderBrush="DarkSeaGreen" Opacity="0.9">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xe704;" FontSize="24" FontFamily="/#iconfont"/>
-                        <TextBlock Text="添加订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xe704;" FontSize="24" FontFamily="/#iconfont"/>
+                            <TextBlock Text="添加订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                    <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
                         Background="YellowGreen" BorderBrush="YellowGreen" Opacity="0.9">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="&#xe613;" FontFamily="/#iconfont" FontSize="24"/>
-                        <TextBlock Text="修改订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xe613;" FontFamily="/#iconfont" FontSize="24"/>
+                            <TextBlock Text="修改订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                    <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
                         Background="DarkOrange" BorderBrush="DarkOrange" Opacity="0.9" Click="toPersonalCenterWin">
-                    <StackPanel Orientation="Horizontal" >
-                        <TextBlock Text="&#xe619;" FontFamily="/#iconfont" FontSize="24"/>
-                        <TextBlock Text="个人中心" x:Name="A_PersonalCenter" Margin="15 0 0 0"  VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="&#xe619;" FontFamily="/#iconfont" FontSize="24"/>
+                            <TextBlock Text="个人中心" x:Name="A_PersonalCenter" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-                <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
+                    <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
                         Background="OrangeRed" BorderBrush="OrangeRed" Opacity="0.9" Click="toLoginWin">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock Text="&#xe612;" FontFamily="/#iconfont" FontSize="24"/>
-                        <TextBlock Text="退出登陆" Margin="15 0 0 0"  VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <TextBlock Text="&#xe612;" FontFamily="/#iconfont" FontSize="24"/>
+                            <TextBlock Text="退出登陆" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
 
-            </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Background="#EEEEEE">
+                <DockPanel>
+                    <TabControl Name="tcMdi">
+                        <TabControl.Background>
+                            <ImageBrush ImageSource="bg2.png" Stretch="UniformToFill" Opacity="0.1"></ImageBrush>
+                        </TabControl.Background>
+
+                    </TabControl>
+                </DockPanel>
+            </Grid>
+
         </Grid>
-
-        <Grid Grid.Column="1" Background="#EEEEEE">
-            <DockPanel>
-                <TabControl Name="tcMdi">
-                    <TabControl.Background>
-                        <ImageBrush ImageSource="bg2.png" Stretch="UniformToFill" Opacity="0.1"></ImageBrush>
-                    </TabControl.Background>
-
-                </TabControl>
-            </DockPanel>
-        </Grid>
-
-    </Grid>
     </Grid>
 </controls:MetroWindow>
