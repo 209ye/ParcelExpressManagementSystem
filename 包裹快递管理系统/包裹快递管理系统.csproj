@@ -146,25 +146,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="页面\PersonalCenter.xaml.cs">
+    <Compile Include="Pages\PersonalCenter.xaml.cs">
       <DependentUpon>PersonalCenter.xaml</DependentUpon>
     </Compile>
     <Compile Include="MySQLConnect.cs" />
-    <Compile Include="页面\SelOrder.cs" />
-    <Compile Include="页面\SecletOrder.xaml.cs">
-      <DependentUpon>SecletOrder.xaml</DependentUpon>
+    <Compile Include="Pages\SelectOrder.xaml.cs">
+      <DependentUpon>SelectOrder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="页面\Main1.xaml.cs">
+    <Compile Include="Pages\SelOrder.cs" />
+    <Compile Include="Pages\AddOrder.xaml.cs">
+      <DependentUpon>AddOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Main1.xaml.cs">
       <DependentUpon>Main1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Page Include="页面\PersonalCenter.xaml">
+    <Compile Include="Pages\CheckLogistics.xaml.cs">
+      <DependentUpon>CheckLogistics.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\PersonalCenter.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="页面\SecletOrder.xaml">
+    <Page Include="Pages\AddOrder.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -180,11 +186,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="页面\Main1.xaml">
+    <Page Include="Pages\Main1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\SelectOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CheckLogistics.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -245,6 +259,9 @@
   <ItemGroup>
     <Resource Include="pic1.jpg" />
     <Resource Include="pic2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="物流icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />

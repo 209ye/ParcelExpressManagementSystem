@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace 包裹快递管理系统
 {
-    class SelOrder
+    public class SelOrder
     {
         public string 订单编号
         {

@@ -8,38 +8,38 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="商家物流管理系统" Height="860" Width="1620" WindowStyle="None" AllowsTransparency="True" MinHeight="726" MinWidth="1460">
+        Title="商家物流管理系统" Height="860" Width="1620" WindowStyle="None" AllowsTransparency="True" MinHeight="726" MinWidth="1460" Icon="物流icon.png" ShowIconOnTitleBar="False">
 
     <Window.Resources>
-        <Style TargetType="{x:Type TabControl}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TabControl}">
-                        <Grid Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Name="ColumnDefinition0" />
-                                <ColumnDefinition Width="0" Name="ColumnDefinition1" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" Name="RowDefinition0" />
-                                <RowDefinition Height="*" Name="RowDefinition1" />
-                            </Grid.RowDefinitions>
-                            <TabPanel Background="#00FFFFFF" IsItemsHost="True" Name="HeaderPanel" 
-                                      Margin="2,2,2,0" Panel.ZIndex="1" KeyboardNavigation.TabIndex="1" 
-                                      Grid.Column="0" Grid.Row="0" />
-                            <Border BorderThickness="{TemplateBinding Border.BorderThickness}" 
-                                    BorderBrush="{TemplateBinding Border.BorderBrush}" 
-                                    Background="{TemplateBinding Panel.Background}" Name="ContentPanel" 
-                                    KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" 
-                                    KeyboardNavigation.DirectionalNavigation="Contained" Grid.Column="0" 
-                                    Grid.Row="1">
-                                <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="10" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                            </Border>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <!-- <Style TargetType="{x:Type TabControl}"> -->
+        <!--     <Setter Property="Template"> -->
+        <!--         <Setter.Value> -->
+        <!--             <ControlTemplate TargetType="{x:Type TabControl}"> -->
+        <!--                 <Grid Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local"> -->
+        <!--                     <Grid.ColumnDefinitions> -->
+        <!--                         <ColumnDefinition Name="ColumnDefinition0" /> -->
+        <!--                         <ColumnDefinition Width="0" Name="ColumnDefinition1" /> -->
+        <!--                     </Grid.ColumnDefinitions> -->
+        <!--                     <Grid.RowDefinitions> -->
+        <!--                         <RowDefinition Height="Auto" Name="RowDefinition0" /> -->
+        <!--                         <RowDefinition Height="*" Name="RowDefinition1" /> -->
+        <!--                     </Grid.RowDefinitions> -->
+        <!--                     <TabPanel Background="#00FFFFFF" IsItemsHost="True" Name="HeaderPanel"  -->
+        <!--                               Margin="2,2,2,0" Panel.ZIndex="1" KeyboardNavigation.TabIndex="1"  -->
+        <!--                               Grid.Column="0" Grid.Row="0" /> -->
+        <!--                     <Border BorderThickness="{TemplateBinding Border.BorderThickness}"  -->
+        <!--                             BorderBrush="{TemplateBinding Border.BorderBrush}"  -->
+        <!--                             Background="{TemplateBinding Panel.Background}" Name="ContentPanel"  -->
+        <!--                             KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local"  -->
+        <!--                             KeyboardNavigation.DirectionalNavigation="Contained" Grid.Column="0"  -->
+        <!--                             Grid.Row="1"> -->
+        <!--                         <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="10" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/> -->
+        <!--                     </Border> -->
+        <!--                 </Grid> -->
+        <!--             </ControlTemplate> -->
+        <!--         </Setter.Value> -->
+        <!--     </Setter> -->
+        <!-- </Style> -->
 
         <Style TargetType="{x:Type TabItem}">
             <!-- <Setter Property="TextBlock.FontFamily" Value="#颜简体"></Setter> -->
@@ -261,23 +261,23 @@
                         Background="BlueViolet" BorderBrush="BlueViolet" Click="toSelectOrderWin" Opacity="0.9">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xe7fe;" FontFamily="/#iconfont" FontSize="26"/>
-                            <TextBlock Text="浏览订单" x:Name="A_SecletOrder" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                            <TextBlock Text="处理订单" x:Name="A_SecletOrder" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
 
                     <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                        Background="DarkSeaGreen" BorderBrush="DarkSeaGreen" Opacity="0.9">
+                        Background="DarkSeaGreen" BorderBrush="DarkSeaGreen" Opacity="0.9" Click="toAddOrder">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xe704;" FontSize="24" FontFamily="/#iconfont"/>
-                            <TextBlock Text="添加订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                            <TextBlock Text="添加订单" x:Name="A_AddOrder" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
 
                     <Button Width="250" Height="60" Margin="15 30 15 0"  FontSize="16" HorizontalContentAlignment="Left"
-                        Background="YellowGreen" BorderBrush="YellowGreen" Opacity="0.9">
+                        Background="YellowGreen" BorderBrush="YellowGreen" Opacity="0.9" Click="toCheckLogistics" >
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="&#xe613;" FontFamily="/#iconfont" FontSize="24"/>
-                            <TextBlock Text="修改订单" Margin="15 0 0 0"  VerticalAlignment="Center"/>
+                            <TextBlock Text="&#xe63a;" FontFamily="/#iconfont" FontSize="24"/>
+                            <TextBlock Text="物流查询" x:Name="A_CheckLogistics" Margin="15 0 0 0"  VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
 
