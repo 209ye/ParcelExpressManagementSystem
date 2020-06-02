@@ -1,20 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MahApps.Metro.Controls;
-using MySql.Data.MySqlClient;
-using Renci.SshNet.Messages;
+
 
 namespace 包裹快递管理系统
 {
@@ -33,7 +19,9 @@ namespace 包裹快递管理系统
 
         private void SO_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show(selectOrder.SelectedItem.ToString());
+            SelOrder s1 = selectOrder.SelectedItem as SelOrder;
+            // MessageBox.Show(s1.物流单号);
+            System.Diagnostics.Process.Start(@"https://www.kuaidi100.com/chaxun?com="+s1.物流公司+@"&nu="+s1.物流单号);
         }
     }
 }

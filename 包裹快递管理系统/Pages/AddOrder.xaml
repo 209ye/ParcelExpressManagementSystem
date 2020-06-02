@@ -1,12 +1,9 @@
 ﻿<UserControl x:Class="包裹快递管理系统.AddOrder"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:包裹快递管理系统"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d"
              d:DesignHeight="960" d:DesignWidth="1650">
     <DockPanel>
@@ -49,13 +46,179 @@
                                         <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="0.5" />
                                     </Grid.Effect>
                                     <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <UniformGrid Grid.Column="0" Margin="28 20 6 20">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+
+                                                <Border Background="White" Margin="20,20,10,20" CornerRadius="10" Height="Auto">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="证件号码.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="物流单号" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Grid.Row="1" Background="White" Margin="20,20,10,20" CornerRadius="10">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="公司.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="物流公司" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <ComboBox Margin="10,20,18,20" Width="360" Name="Lcom" DisplayMemberPath="Name" SelectedValuePath="Name" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Grid.Row="2" Background="White" Margin="20,20,10,20" CornerRadius="10">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="人工智能.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="发件人" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,20,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Grid.Row="3" Background="White" Margin="20,20,10,20" CornerRadius="10">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="地址.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="发货地址" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Grid.Row="4" Background="White" Margin="20,20,10,20" CornerRadius="10">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="人工智能.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="收件人" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </Grid>
+
+                                        </UniformGrid>
+                                        <UniformGrid Grid.Column="1" Margin="6 20 28 20">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+
+                                                <Border Background="White" Margin="10,20,20,20" CornerRadius="10" Height="Auto">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="地址.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="收件地址" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Grid.Row="1" Background="White" Margin="10,20,20,20" CornerRadius="10">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="电话.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="收件电话" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Grid.Row="2" Background="White" Margin="10,20,20,20" CornerRadius="10">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="使用状态-01.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="状态" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Grid.Row="3" Background="White" Margin="10,20,20,20" CornerRadius="10">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                            <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Grid.Background>
+                                                                    <ImageBrush ImageSource="备注.png" Stretch="Uniform"/>
+                                                                </Grid.Background>
+                                                            </Grid>
+                                                            <TextBlock  Margin="0,0,-5,-10" Text="备注" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                        </Grid>
+                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Button Grid.Row="4"  Margin="10,20,20,20" Height="Auto">
+                                                    <Button.Background>
+                                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                            <LinearGradientBrush.Transform>
+                                                                <TransformGroup>
+                                                                    <ScaleTransform/>
+                                                                    <SkewTransform/>
+                                                                    <RotateTransform Angle="-45"/>
+                                                                    <TranslateTransform/>
+                                                                </TransformGroup>
+                                                            </LinearGradientBrush.Transform>
+                                                            <GradientStop Color="#FF10EAF8" Offset="0"/>
+                                                            <GradientStop Color="#FF00B0FF" Offset="1"/>
+                                                        </LinearGradientBrush>
+                                                    </Button.Background>
+                                                    <TextBlock Text="确定添加" FontSize="24" FontFamily="/包裹快递管理系统;component/#颜简体"></TextBlock>
+                                                </Button>
+                                            </Grid>
+
+                                        </UniformGrid>
+
                                     </Grid>
                                 </Grid>
 

@@ -9,6 +9,9 @@
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d"
              d:DesignHeight="960" d:DesignWidth="1650">
+
+    
+
     <DockPanel>
         <Grid>
             <!-- <Grid.ColumnDefinitions> -->
@@ -24,7 +27,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock FontSize="22" FontWeight="Light" Margin="50 10 0 0" VerticalAlignment="Center" Text="物理查询"/>
+                <TextBlock FontSize="22" FontWeight="Light" Margin="50 10 0 0" VerticalAlignment="Center"><Run Text="物"/><Run Text="流"/><Run Text="查询"/></TextBlock>
 
 
                 <UniformGrid Grid.Row="1">
@@ -55,6 +58,7 @@
                                     <DataGrid.Effect>
                                         <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="0.5" />
                                     </DataGrid.Effect>
+
                                     <DataGrid.ColumnHeaderStyle>
                                         <Style></Style>
                                     </DataGrid.ColumnHeaderStyle>

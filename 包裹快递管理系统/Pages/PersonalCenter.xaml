@@ -52,7 +52,7 @@
                                 </Grid.RowDefinitions>
                                 <Border x:Name="Border2" Grid.Row="0" Grid.RowSpan="3" CornerRadius="5"
                                         Background="White" />
-                                <Button Margin="15,15,15,15" Grid.Row="0" Grid.RowSpan="3" Height="Auto">
+                                <Button Margin="12,12,12,12" Grid.Row="0" Grid.RowSpan="3" Height="Auto">
                                     <Button.Background>
                                         <LinearGradientBrush StartPoint="0,1" EndPoint="1,1">
                                             <GradientStop Offset="0" Color="Gold" />
@@ -103,7 +103,7 @@
                                     <RowDefinition Height=".50*" />
                                 </Grid.RowDefinitions>
                                 <Border Grid.Row="0" Grid.RowSpan="3" CornerRadius="5" Background="White" />
-                                <Button Margin="15,15,15,15" Grid.Row="0" Grid.RowSpan="3" Height="Auto">
+                                <Button Margin="12,12,12,12" Grid.Row="0" Grid.RowSpan="3" Height="Auto">
                                     <Button.Background>
                                         <LinearGradientBrush StartPoint="0,1" EndPoint="1,1">
                                             <GradientStop Offset="0" Color="#00CED1" />

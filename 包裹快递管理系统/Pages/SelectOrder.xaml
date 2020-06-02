@@ -51,7 +51,7 @@
 
                                 </Border>
 
-                                <DataGrid Grid.Row="1" Style="{StaticResource MaterialDesignDataGrid}" x:Name="selectOrder" IsReadOnly="False" AutoGenerateColumns="True" CanUserAddRows="False" CanUserSortColumns="True" FontSize="20" FontFamily="/包裹快递管理系统;component/#Microsoft YaHei Light" Opacity="0.9">
+                                <DataGrid Grid.Row="1" Style="{StaticResource MaterialDesignDataGrid}" x:Name="selectOrder" IsReadOnly="False" AutoGenerateColumns="True" CanUserAddRows="False" CanUserSortColumns="True" FontSize="20" FontFamily="/包裹快递管理系统;component/#Microsoft YaHei Light" Opacity="0.9" CellEditEnding="dataGrid_CellEditEnding">
                                     <DataGrid.Effect>
                                         <DropShadowEffect Color="#D1D1D1" BlurRadius="30"  ShadowDepth="10" Opacity="0.5" />
                                     </DataGrid.Effect>

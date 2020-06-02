@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using MySql.Data.MySqlClient;
+using 包裹快递管理系统.Pages;
 
 namespace 包裹快递管理系统
 {
@@ -26,7 +27,10 @@ namespace 包裹快递管理系统
 
         public AddOrder()
         {
-            
+            InitializeComponent();
+            List<LComs> list = new List<LComs>();
+            list.Add(new LComs("韵达快递"));
+            Lcom.ItemsSource = list;
         }
     }
 }

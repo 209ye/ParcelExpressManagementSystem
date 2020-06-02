@@ -254,35 +254,35 @@
                                         <RowDefinition Height="0.8*"/>
                                         <RowDefinition Height="1.8*"/>
                                     </Grid.RowDefinitions>
-                                    <Button Panel.ZIndex="1" Margin="20,-60,20,78" HorizontalContentAlignment="Left"
+                                    <Button Panel.ZIndex="1" Margin="20,-28,19.945,0" HorizontalContentAlignment="Left"
                                     materialDesign:ShadowAssist.ShadowDepth="Depth3"
-                                    Height="120" BorderBrush="PowderBlue" Background="#FF4664B4" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                    Height="67" BorderBrush="PowderBlue" Background="#FF4664B4" Grid.ColumnSpan="2" VerticalAlignment="Top">
                                         <StackPanel>
-                                            <TextBlock Grid.Row="2" Text="Microsoft Acquisition Case" Foreground="White"  FontWeight="Light" VerticalAlignment="Center" FontSize="26"/>
+                                            <TextBlock Grid.Row="2" Text="2020年05月员工销售业绩排名榜" Foreground="White"  FontWeight="Light" VerticalAlignment="Center" FontSize="20"/>
                                         </StackPanel>
                                     </Button>
 
                                     <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0">
                                         <UniformGrid Rows="4" Columns="4">
-                                            <TextBlock Text="ID" Foreground="#FC940D" FontSize="16" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="Name" Foreground="#FC940D" FontSize="16" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="Country" Foreground="#FC940D" FontSize="16" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="Amount" Foreground="#FC940D" FontSize="16" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="排名" Foreground="BlueViolet" FontSize="16" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="姓名" Foreground="BlueViolet" FontSize="16" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="部门" Foreground="BlueViolet" FontSize="16" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="销售业绩" Foreground="BlueViolet" FontSize="16" HorizontalAlignment="Center"/>
 
                                             <TextBlock Text="1" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="Github" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="USA" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="120 billion" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="曹建华" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="电子数码" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="28999" HorizontalAlignment="Center"/>
 
                                             <TextBlock Text="2" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="Nokia" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="Finland" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="240 billion" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="我家肉兔爱吃肉" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="潮流单品" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="24117" HorizontalAlignment="Center"/>
 
                                             <TextBlock Text="3" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="LinkedIn" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="USA" HorizontalAlignment="Center"/>
-                                            <TextBlock Text="260 billion" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="小锅与丙子" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="宠物用品" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="13288" HorizontalAlignment="Center"/>
                                         </UniformGrid>
                                     </Grid>
                                 </Grid>
@@ -291,11 +291,6 @@
                         </Grid>
 
                     </Grid>
-                    
-                </UniformGrid>
-
-                <UniformGrid Grid.Row="3" Columns="2">
-
 
                 </UniformGrid>
 
