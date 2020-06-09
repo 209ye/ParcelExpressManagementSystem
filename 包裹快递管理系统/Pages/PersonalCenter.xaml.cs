@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MahApps.Metro.Controls;
+
 
 namespace 包裹快递管理系统
 {
@@ -24,6 +12,44 @@ namespace 包裹快递管理系统
         public PersonalCenter()
         {
             InitializeComponent();
+        }
+
+        private void ChangeGold(object sender, RoutedEventArgs e)
+        {
+            if (ButtonLeft.Opacity == 0.95)
+            {
+                HeadLeft.Opacity = 0.3;
+                ButtonLeft.Opacity = 0.3;
+                BorderLeft.Opacity = 0.8;
+                BorderLeftBack.Background.Opacity = 0.9;
+            }
+            else
+            {
+                HeadLeft.Opacity = 1;
+                ButtonLeft.Opacity = 0.95;
+                BorderLeft.Opacity = 1;
+                BorderLeftBack.Background.Opacity = 0.2;
+            }
+            
+        }
+
+        private void ChangeBlueGreen(object sender, RoutedEventArgs e)
+        {
+            if (ButtonRight.Opacity == 0.95)
+            {
+                HeadRight.Opacity = 0.3;
+                ButtonRight.Opacity = 0.3;
+                BorderRight.Opacity = 0.8;
+                BorderRightBack.Background.Opacity = 0.9;
+            }
+            else
+            {
+                HeadRight.Opacity = 1;
+                ButtonRight.Opacity = 0.95;
+                BorderRight.Opacity = 1;
+                BorderRightBack.Background.Opacity = 0.2;
+            }
+
         }
     }
 }

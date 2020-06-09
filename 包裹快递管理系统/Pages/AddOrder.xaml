@@ -50,7 +50,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition/>
                                         </Grid.ColumnDefinitions>
-                                        <UniformGrid Grid.Column="0" Margin="28 20 6 20">
+                                        <UniformGrid Grid.Column="0" Margin="28 10 6 20">
                                             <Grid>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition/>
@@ -62,27 +62,27 @@
 
                                                 <Border Background="White" Margin="20,20,10,20" CornerRadius="10" Height="Auto">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="证件号码.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="物流单号" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="物流单号" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_mail_id" Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
 
                                                 <Border Grid.Row="1" Background="White" Margin="20,20,10,20" CornerRadius="10">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="公司.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="物流公司" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="物流公司" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
                                                         <ComboBox Margin="10,20,18,20" Width="360" Name="Lcom" DisplayMemberPath="Name" SelectedValuePath="Name" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
@@ -90,43 +90,43 @@
 
                                                 <Border Grid.Row="2" Background="White" Margin="20,20,10,20" CornerRadius="10">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="人工智能.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="发件人" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="发件人" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,20,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_org_name" Margin="10,20,20,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
 
                                                 <Border Grid.Row="3" Background="White" Margin="20,20,10,20" CornerRadius="10">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="地址.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="发货地址" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="发货地址" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_org_address" Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
 
                                                 <Border Grid.Row="4" Background="White" Margin="20,20,10,20" CornerRadius="10">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="人工智能.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="收件人" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="收件人" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_send_name" Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
                                             </Grid>
@@ -144,68 +144,82 @@
 
                                                 <Border Background="White" Margin="10,20,20,20" CornerRadius="10" Height="Auto">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="地址.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="收件地址" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="收件地址" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_send_address" Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
 
                                                 <Border Grid.Row="1" Background="White" Margin="10,20,20,20" CornerRadius="10">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="电话.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="收件电话" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="收件电话" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_send_contact" Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
 
                                                 <Border Grid.Row="2" Background="White" Margin="10,20,20,20" CornerRadius="10">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="使用状态-01.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,0,-10" Text="状态" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,0,-10" Text="状态" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_status" Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
 
                                                 <Border Grid.Row="3" Background="White" Margin="10,20,20,20" CornerRadius="10">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Grid Margin="30 0 5 20" Width="80">
+                                                        <Grid Margin="20 0 5 20" Width="80">
                                                             <Grid Height="40" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                                                                 <Grid.Background>
                                                                     <ImageBrush ImageSource="备注.png" Stretch="Uniform"/>
                                                                 </Grid.Background>
                                                             </Grid>
-                                                            <TextBlock  Margin="0,0,-5,-10" Text="备注" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                                                            <TextBlock  Margin="0,0,-5,-10" Text="备注" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
                                                         </Grid>
-                                                        <TextBox Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        <TextBox x:Name="input_remarks" Margin="10,20,18,20" Width="360" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </StackPanel>
                                                 </Border>
 
-                                                <Button Grid.Row="4"  Margin="10,20,20,20" Height="Auto">
+                                                <Button Grid.Row="4"  Margin="10,20,20,20" Height="Auto" Click="Addconfirm">
+                                                    <Button.BorderBrush>
+                                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                            <LinearGradientBrush.Transform>
+                                                                <TransformGroup>
+                                                                    <ScaleTransform/>
+                                                                    <SkewTransform/>
+                                                                    <RotateTransform Angle="-30"/>
+                                                                    <TranslateTransform/>
+                                                                </TransformGroup>
+                                                            </LinearGradientBrush.Transform>
+                                                            <GradientStop Color="#FF10EAF8" Offset="0"/>
+                                                            <GradientStop Color="#FF00B0FF" Offset="1"/>
+                                                        </LinearGradientBrush>
+                                                    </Button.BorderBrush>
                                                     <Button.Background>
                                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                                             <LinearGradientBrush.Transform>
                                                                 <TransformGroup>
                                                                     <ScaleTransform/>
                                                                     <SkewTransform/>
-                                                                    <RotateTransform Angle="-45"/>
+                                                                    <RotateTransform Angle="-30"/>
                                                                     <TranslateTransform/>
                                                                 </TransformGroup>
                                                             </LinearGradientBrush.Transform>
@@ -213,7 +227,7 @@
                                                             <GradientStop Color="#FF00B0FF" Offset="1"/>
                                                         </LinearGradientBrush>
                                                     </Button.Background>
-                                                    <TextBlock Text="确定添加" FontSize="24" FontFamily="/包裹快递管理系统;component/#颜简体"></TextBlock>
+                                                    <TextBlock Text="确定添加" FontSize="26" FontFamily="/包裹快递管理系统;component/#颜简体"></TextBlock>
                                                 </Button>
                                             </Grid>
 

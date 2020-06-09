@@ -59,19 +59,24 @@
                                         <Style></Style>
                                     </DataGrid.ColumnHeaderStyle>
                                     <!-- <DataGrid.Columns> -->
-                                    <!--     <DataGridComboBoxColumn x:Name="DingDan" Header="订单编号" DisplayMemberPath="订单编号" SelectedValuePath="订单编号ID"  TextBinding="{Binding 订单编号}" SelectedValueBinding="{Binding 订单编号ID}" Width="160" /> -->
-                                    <!--     <DataGridTextColumn Header="物流单号" Binding="{Binding 物流单号}" Width="160" /> -->
-                                    <!--     <DataGridTextColumn Header="物流公司" Binding="{Binding 物流公司 }" Width="140" /> -->
-                                    <!--     <DataGridTextColumn Header="发件人" Binding="{Binding 发件人 }" Width="120" /> -->
-                                    <!--     <DataGridTextColumn Header="发货地址" Binding="{Binding 发货地址 }" Width="160" /> -->
-                                    <!--     <DataGridTextColumn Header="收件人" Binding="{Binding 收件人 }" Width="120" /> -->
-                                    <!--     <DataGridTextColumn Header="收件地址" Binding="{Binding 收件地址 }" Width="160" /> -->
-                                    <!--     <DataGridTextColumn Header="收件人电话" Binding="{Binding 收件人电话 }" Width="160" /> -->
-                                    <!--     <DataGridTextColumn Header="状态" Binding="{Binding 状态 }" Width="100" /> -->
-                                    <!--     <DataGridTextColumn Header="备注" Binding="{Binding 备注 }" Width="160" /> -->
-                                    <!-- -->
+                                    <!--     <DataGridTextColumn Header="订单编号" Binding="{Binding 订单编号}" Width="*" /> -->
+                                    <!--     <DataGridTextColumn Header="物流单号" Binding="{Binding 物流单号}" Width="*" /> -->
+                                    <!--     <DataGridTextColumn Header="物流公司" Binding="{Binding 物流公司 }" Width="*" /> -->
+                                    <!--     <DataGridTextColumn Header="发件人" Binding="{Binding 发件人 }"  Width="*" /> -->
+                                    <!--     <DataGridTextColumn Header="发货地址" Binding="{Binding 发货地址 }"  Width="*"  /> -->
+                                    <!--     <DataGridTextColumn Header="收件人" Binding="{Binding 收件人 }"  Width="*"  /> -->
+                                    <!--     <DataGridTextColumn Header="收件地址" Binding="{Binding 收件地址 }"  Width="*"  /> -->
+                                    <!--     <DataGridTextColumn Header="收件人电话" Binding="{Binding 收件人电话 }"  Width="*"  /> -->
+                                    <!--     <DataGridTextColumn Header="状态" Binding="{Binding 状态 }" Width="*"  /> -->
+                                    <!--     <DataGridTextColumn Header="备注" Binding="{Binding 备注 }" Width="*"  /> -->
                                     <!-- </DataGrid.Columns> -->
                                 </DataGrid>
+
+                                <Button  Margin="30" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="100" Width="100" BorderBrush="White" Click="toDelRow">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="删除.png" Stretch="None"/>
+                                    </Button.Background>
+                                </Button>
 
                             </Grid>
 

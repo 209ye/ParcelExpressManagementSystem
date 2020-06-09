@@ -14,7 +14,7 @@ namespace 包裹快递管理系统
         {
             InitializeComponent();
             //selectOrder.ItemsSource = dt.DefaultView;
-            selectOrder.ItemsSource = MainWindow.selOrder;
+            selectOrder.ItemsSource = Login.m1.selOrder;
         }
 
         private void SO_SelectionChanged(object sender, SelectionChangedEventArgs e)

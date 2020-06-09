@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace 包裹快递管理系统
 {
@@ -92,5 +93,50 @@ namespace 包裹快递管理系统
         string RecipientTel;
         string status;
         string Remarks;
+
+        public void toValue(string a,string b)
+        {
+            // MessageBox.Show(a, b);
+            if (a == "物流单号")
+            {
+                shipmentNumber = b;
+            }
+            else if (a == "物流公司")
+            {
+                LogisticsCompany = b;
+            }
+            else if (a == "订单编号")
+            {
+                OrderNumber = b;
+            }
+            else if (a == "发件人")
+            {
+                Sender = b;
+            }
+            else if (a == "发货地址")
+            {
+                deliveryAddress = b;
+            }
+            else if (a == "收件人")
+            {
+                Recipient = b;
+            }
+            else if (a == "收件地址")
+            {
+                RecipientAddress = b;
+            }
+            else if (a == "收件人电话")
+            {
+                RecipientTel = b;
+            }else if (a == "状态")
+            {
+                status = b;
+            }
+            else
+            {
+                Remarks = b;
+            }
+
+        }
     }
 }

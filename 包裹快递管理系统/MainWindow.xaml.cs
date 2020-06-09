@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 using MySql.Data.MySqlClient;
 
 namespace 包裹快递管理系统
@@ -22,9 +24,7 @@ namespace 包裹快递管理系统
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        MySQLConnect connect = new MySQLConnect();
-
-        public static List<SelOrder> selOrder;
+        public List<SelOrder> selOrder;
 
         public MainWindow()
         {
@@ -41,9 +41,30 @@ namespace 包裹快递管理系统
             // Background = Brushes.Transparent;
             // Topmost = true;
 
+            //数据库连接
+            ChangeSQl();
+
+        }
+
+        // private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+        // {
+        //     WindowState = WindowState.Maximized;
+        //     ResizeMode = ResizeMode.NoResize;
+        //     ShowMaxRestoreButton = false;
+        //     ShowMinButton = false;
+        //     Loaded -= OnLoaded;
+        // }
+
+        void Border_Title_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        public void ChangeSQl()
+        {
             selOrder = new List<SelOrder>();
             //DataTable dt = new DataTable();
-
+            MySQLConnect connect = new MySQLConnect();
             try
             {
                 //DataTable的实现方式，会把顶部的表头覆盖掉
@@ -90,20 +111,6 @@ namespace 包裹快递管理系统
                 connect.MySqlConnection.Close();
             }
 
-        }
-
-        // private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
-        // {
-        //     WindowState = WindowState.Maximized;
-        //     ResizeMode = ResizeMode.NoResize;
-        //     ShowMaxRestoreButton = false;
-        //     ShowMinButton = false;
-        //     Loaded -= OnLoaded;
-        // }
-
-        void Border_Title_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
         }
 
         private void Main1Page(object sender, RoutedEventArgs e)
@@ -168,22 +175,23 @@ namespace 包裹快递管理系统
             this.Close();
         }
 
+        public static SelectOrder m1;
         private void toSelectOrderWin(object sender, RoutedEventArgs e)
         {
-            SelectOrder m1 = new SelectOrder();
+            m1 = new SelectOrder();
             AddTab(m1, A_SecletOrder.Text);
         }
 
         private void toPersonalCenterWin(object sender, RoutedEventArgs e)
         {
-            PersonalCenter m1 = new PersonalCenter();
-            AddTab(m1, A_PersonalCenter.Text);
+            PersonalCenter m1s = new PersonalCenter();
+            AddTab(m1s, A_PersonalCenter.Text);
         }
 
         private void toAddOrder(object sender, RoutedEventArgs e)
         {
-            AddOrder c1 = new AddOrder();
-            AddTab(c1, A_AddOrder.Text);
+            AddOrder c1s = new AddOrder();
+            AddTab(c1s, A_AddOrder.Text);
         }
 
         private void toCheckLogistics(object sender, RoutedEventArgs e)
@@ -191,5 +199,6 @@ namespace 包裹快递管理系统
             CheckLogistics c1 = new CheckLogistics();
             AddTab(c1, A_CheckLogistics.Text);
         }
+
     }
 }
