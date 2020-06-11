@@ -173,10 +173,45 @@ namespace 包裹快递管理系统
                 }
                 else//确认
                 {
-                    //确认后的处理
+                    try
+                    {
+                        connect.MySqlConnection.Open();
+                        connect.ConnectIndex = true;
+                        String str_sql = "delete from fact_mail_status where mail_id = '" + s1.物流单号 + "'";
+                        Console.WriteLine(str_sql);
+                        MySqlCommand mysql_cmd = new MySqlCommand(str_sql, connect.MySqlConnection);
+
+                        String str_sql_2 = "delete from order_list where mail_id = '" + s1.物流单号 + "'";
+                        MySqlCommand mysql_cmd_1 = new MySqlCommand(str_sql_2, connect.MySqlConnection);
+
+                        int result_1 = mysql_cmd.ExecuteNonQuery();
+                        int result_2 = mysql_cmd_1.ExecuteNonQuery();
+
+                        if (result_1 > 0 && result_2 > 0)
+                        {
+                            MessageDialogResult deletefinish = await Login.m1.ShowMessageAsync("删除成功！", "请继续其他操作");
+                        }
+                        else
+                        {
+                            MessageDialogResult deleteerror = await Login.m1.ShowMessageAsync("删除失败！", "检查数据库的连接");
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    finally
+                    {
+                        //关闭游标
+                        connect.MySqlConnection.Close();
+                        Login.m1.ChangeSQl();
+                        MainWindow.m1.selectOrder.ItemsSource = Login.m1.selOrder;
+                        MainWindow.c1.selectOrder.ItemsSource = Login.m1.selOrder;
+                    }
+
                 }
             }
-            
+
         }
 
     }

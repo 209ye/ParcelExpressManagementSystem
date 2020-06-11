@@ -194,9 +194,10 @@ namespace 包裹快递管理系统
             AddTab(c1s, A_AddOrder.Text);
         }
 
+        public static CheckLogistics c1;
         private void toCheckLogistics(object sender, RoutedEventArgs e)
         {
-            CheckLogistics c1 = new CheckLogistics();
+            c1 = new CheckLogistics();
             AddTab(c1, A_CheckLogistics.Text);
         }
 

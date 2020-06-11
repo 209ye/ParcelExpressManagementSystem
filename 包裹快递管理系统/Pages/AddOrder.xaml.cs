@@ -137,6 +137,7 @@ namespace 包裹快递管理系统
                 connect.MySqlConnection.Close();
                 Login.m1.ChangeSQl();
                 MainWindow.m1.selectOrder.ItemsSource = Login.m1.selOrder;
+                MainWindow.c1.selectOrder.ItemsSource = Login.m1.selOrder;
             }
         }
 
