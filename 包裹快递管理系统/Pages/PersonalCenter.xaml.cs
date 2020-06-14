@@ -30,7 +30,7 @@ namespace 包裹快递管理系统
                 BorderLeft.Opacity = 1;
                 BorderLeftBack.Background.Opacity = 0.2;
             }
-            
+
         }
 
         private void ChangeBlueGreen(object sender, RoutedEventArgs e)

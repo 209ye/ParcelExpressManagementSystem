@@ -1,9 +1,9 @@
-﻿using System;
+﻿using MahApps.Metro.Controls.Dialogs;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using MahApps.Metro.Controls.Dialogs;
-using MySql.Data.MySqlClient;
 using 包裹快递管理系统.Pages;
 
 namespace 包裹快递管理系统
@@ -136,8 +136,22 @@ namespace 包裹快递管理系统
                 //关闭游标
                 connect.MySqlConnection.Close();
                 Login.m1.ChangeSQl();
-                MainWindow.m1.selectOrder.ItemsSource = Login.m1.selOrder;
-                MainWindow.c1.selectOrder.ItemsSource = Login.m1.selOrder;
+                try
+                {
+                    MainWindow.c1.selectOrder.ItemsSource = Login.m1.selOrder;
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                }
+                try
+                {
+                    MainWindow.m1.selectOrder.ItemsSource = Login.m1.selOrder;
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                }
             }
         }
 

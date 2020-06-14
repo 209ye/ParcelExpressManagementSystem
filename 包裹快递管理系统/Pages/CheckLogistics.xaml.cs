@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 
 namespace 包裹快递管理系统
@@ -21,7 +20,7 @@ namespace 包裹快递管理系统
         {
             SelOrder s1 = selectOrder.SelectedItem as SelOrder;
             // MessageBox.Show(s1.物流单号);
-            System.Diagnostics.Process.Start(@"https://www.kuaidi100.com/chaxun?com="+s1.物流公司+@"&nu="+s1.物流单号);
+            System.Diagnostics.Process.Start(@"https://www.kuaidi100.com/chaxun?com=" + s1.物流公司 + @"&nu=" + s1.物流单号);
         }
     }
 }

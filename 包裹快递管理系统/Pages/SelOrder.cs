@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-
-namespace 包裹快递管理系统
+﻿namespace 包裹快递管理系统
 {
     public class SelOrder
     {
@@ -94,7 +87,7 @@ namespace 包裹快递管理系统
         string status;
         string Remarks;
 
-        public void toValue(string a,string b)
+        public void toValue(string a, string b)
         {
             // MessageBox.Show(a, b);
             if (a == "物流单号")
@@ -128,7 +121,8 @@ namespace 包裹快递管理系统
             else if (a == "收件人电话")
             {
                 RecipientTel = b;
-            }else if (a == "状态")
+            }
+            else if (a == "状态")
             {
                 status = b;
             }
