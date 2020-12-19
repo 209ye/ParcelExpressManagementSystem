@@ -3,6 +3,10 @@
 ## Material Design in XAML Toolkit
 ## MahApps.Metro
 
+
+介绍：[https://blog.csdn.net/weixin_43164778/article/details/106381424](https://blog.csdn.net/weixin_43164778/article/details/106381424)
+
+
 这是一个商家的快递包裹管理系统
 使用了两大框架，MySql数据库，使用时务必更改数据库名称
 
