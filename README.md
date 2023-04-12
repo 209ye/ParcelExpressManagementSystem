@@ -13,3 +13,21 @@
 
 This is a merchant's express parcel management system
 Two major frameworks are used, MySql database, be sure to change the database name when using
+
+## Operating environment：
+
+ControlzEx 4.3.0 
+
+LiveCharts 0.9.7 
+
+Livechars.Wpf 0.9.7 
+
+MahApps.Metro 2.0.0 
+
+MaterialDesignColors 1.2.6 
+
+MaterialDesignThemes 3.1.2 
+
+Microsoft.Xaml.Behaviors.Wpf 1.1.19 
+
+ShowMeTheXAML 1.0.12 
